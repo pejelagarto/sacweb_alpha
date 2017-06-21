@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MenuConfig>
+    <Displayers>
+        <Displayer name="Velocity" type="net.sf.navigator.displayer.VelocityMenuDisplayer"/>
+    </Displayers>
+    <Menus>
+        <Menu name="Home" title="home.title" page="/home" roles="ROLE_ADMIN,ROLE_USER,ROLE_SAC"/>
+        <Menu name="UserMenu" title="menu.user" description="User Menu" page="/userform" roles="ROLE_ADMIN,ROLE_USER,ROLE_SAC"/>
+        <Menu name="AdminMenu" title="menu.admin" description="Admin Menu" roles="ROLE_ADMIN" page="/admin/users">
+            <Item name="ViewUsers" title="menu.admin.users" page="/admin/users"/>
+            <Item name="ActiveUsers" title="home.activeUsers" page="/admin/activeUsers"/>
+            <Item name="ReloadContext" title="menu.admin.reload" page="/admin/reload"/>
+            <Item name="FileUpload" title="menu.selectFile" page="/fileupload"/>
+        </Menu>
+
+        <Menu name="ot" title="ot.ot" description="Ordenes de Trabajo" roles="ROLE_ADMIN,ROLE_SAC" page="">
+            <Item name="NuevaOT" title="menu.detalleOt.nuevaOt" page="/ot/iniciarOT" roles="ROLE_ADMIN,ROLE_SAC"/>
+            <Item name="Consultar OT's" title="menu.detalleOT.consultarOts" page="/ot/consultarOT" />
+        </Menu>
+        <Menu name="items" title="menu.items" description="Items" roles="ROLE_ADMIN,ROLE_SAC" page="">
+            <Item name="Consultar" title="menu.items.consultaItems" page="/items/consultarItems" />
+        </Menu>
+
+        <Menu name="clientes" title="menu.clientes" description="Administrar Clientes" roles="ROLE_ADMIN,ROLE_SAC,ROLE_USER" >
+            <Item name="NuevoCliente" title="menu.cliente.nuevo" page="/cliente/addCliente"/>
+            <Item name="Consultar OT's" title="menu.cliente.consultar" page="/cliente/consultar"/>
+        </Menu>
+
+        <Menu name="Logout" title="user.logout" page="/logout" roles="ROLE_ADMIN,ROLE_USER"/>
+    </Menus>
+</MenuConfig>
