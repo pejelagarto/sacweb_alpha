@@ -18,15 +18,15 @@ import java.util.Date;
  * The persistent class for the DETALLEOTS database table.
  */
 @Entity
-@Table(name = "DETALLEOTS")
+@Table(name = "ITEMS")
 @NamedQuery(name = "Detalleot.findAll", query = "SELECT d FROM ItemsEntity d")
 public class ItemsEntity implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "detalleSequence")
-    @SequenceGenerator(name = "detalleSequence", sequenceName = "SAC_DETALLEOT_SEQUENCE")
-    private Long detalleOtId;
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "itemsSequence")
+    @SequenceGenerator(name = "itemsSequence", sequenceName = "SAC_ITEM_SEQUENCE")
+    private Long itemsId;
 
 /*
     @ManyToOne(fetch = FetchType.EAGER,cascade = {CascadeType.MERGE})
@@ -88,12 +88,12 @@ public class ItemsEntity implements Serializable {
     @Type(type = "true_false")
     private Boolean tercerizado;
 
-    public Long getDetalleOtId() {
-        return detalleOtId;
+    public Long getItemsId() {
+        return itemsId;
     }
 
-    public void setDetalleOtId(Long detalleOtId) {
-        this.detalleOtId = detalleOtId;
+    public void setItemsId(Long itemsId) {
+        this.itemsId = itemsId;
     }
 
     public Long getOtId() {
